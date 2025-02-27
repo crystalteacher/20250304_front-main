@@ -389,7 +389,7 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 80px;
+  //margin-bottom: 80px;
 `;
 
 //  슬라이드 섹션
