@@ -615,7 +615,6 @@ function SignUp() {
 const SignupContainer = styled.div`
   width: 1200px;
   margin: 0 auto;
- 
   padding-bottom: 90px;
 `;
 

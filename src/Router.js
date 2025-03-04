@@ -27,7 +27,13 @@ import SignUp from "./components/user/login/SignUp.js";
 import FindId from "./components/user/login/FindId.js";
 import FindPw from "./components/user/login/FindPw.js";
 
+//
 import MyPage from "./components/user/mypage/MyPage.js";
+import UserProfile from "./components/user/mypage/UserProfile.js";
+import UserUpdate from "./components/user/mypage/UserUpdate.js";
+import ReservationCheck from "./components/user/mypage/ReservationCheck.js";
+
+
 
 import AdminHome from "./components/admin/AdminHome.js";
 import Footer from "./components/common/Footer.js";
@@ -73,11 +79,20 @@ const Router = () => {
         <Route path="/reviewUpdate" element={<ReviewUpdate />}></Route>
         <Route path="/reviewWrite" element={<ReviewWrite />}></Route>
 
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/signUp" element={<SignUp />} />
+
         <Route path="/findId" element={<FindId />} />
         <Route path="/findPw" element={<FindPw />} />
+
         <Route path="/mypage" element={<MyPage />}></Route>
+        <Route path="/mypage/UserProfile" element={<UserProfile />}></Route>
+        <Route path="/mypage/UserUpdate" element={<UserUpdate />}></Route>
+        <Route path="/mypage/ReservationCheck" element={<ReservationCheck />}></Route>
+
+
+
+
         <Route path="/adminhome" element={<AdminHome />}></Route>
       </Routes>
 

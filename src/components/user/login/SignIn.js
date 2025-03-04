@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { AuthContext, HttpHeadersContext } from "../../../context";
 import one from "./imgs/one.svg";
 import google from "./imgs/google_login.svg";
+import naverLogin from "./imgs/naver_login.svg";
 
 function SignIn() {
   const { setAuth } = useContext(AuthContext);
@@ -146,9 +147,12 @@ function SignIn() {
         </Article>
 
         <SignButton onClick={googleLogin}>
-          <img src={google} alt="google"/>
-          구글 로그인
+          <img src={google} alt="google"/>구글 로그인
         </SignButton>
+
+        <SignsButton onClick={naverLogin}>
+          <img src={naverLogin} alt="naver"/>네이버 로그인
+        </SignsButton>
 
 
         {/*<button onClick={googleLogin}>구글 로그인</button>*/}
@@ -382,6 +386,37 @@ const SignButton = styled.button`
   font-weight: 500;
   font-size: 15.2px;
   text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  
+  img{
+    float: left;
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+  }
+
+  &:hover{
+    box-shadow: 0 0 10px 0 rgba(13, 50, 111, 0.15);
+  };
+`;
+//6-3.네이버 로그인(SNS)
+const SignsButton = styled.button`
+  
+  width: 450px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  border: 1.5px solid #e0e0e0;
+  background-color: #03C75A;
+  color: #fff;
+  outline: none;
+  
+  font-weight: 500;
+  font-size: 15.2px;
+  text-align: center;
   margin-bottom: 45px;
   position: relative;
   
@@ -393,13 +428,9 @@ const SignButton = styled.button`
   }
   
   &:hover{
-    border: 1px solid #0D326F;
-    color: #0D326F;
-    font-weight: 600;
-    box-shadow: rgba(0,0,0,0.8);
+    box-shadow: 0 0 10px 0 rgba(13, 50, 111, 0.15);
   };
 `;
-
 
 
 export default SignIn;

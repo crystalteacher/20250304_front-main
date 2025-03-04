@@ -12,6 +12,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterSection>
+      <FooterSections>
         <FooterBoxA>
           <FooterLogo>
             <img src={footer_logo} width="180px" height="" />
@@ -61,57 +62,78 @@ function Footer() {
             <p>©&nbsp;Copyright 2025 HIPAT. All Rights Reserved</p>
           </Copy>{" "}
         </FooterBoxB>
+      </FooterSections>
       </FooterSection>
     </FooterContainer>
   );
 }
 
+//1.푸터 전체 박스
 const FooterContainer = styled.div`
-     position: sticky;
   width: 100%;
-  height: 265px;
-  background-color: #0E0E0E;
-
  `;
 
+
+//2.푸터 알맹이 박스
 const FooterSection = styled.div`
-  margin: auto;
+  
+  position: absolute;
+  //bottom: 0;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  width: 100%;
+  z-index: 9999!important;
+  border-top: 1px solid rgb(25, 31, 40);
+  background-color: #0E0E0E;
+`;
+
+
+//3.
+const FooterSections = styled.div`
   width: 1280px;
   height: 265px;
   position: relative;
-  display: flex;
+  margin: 0 auto;
+  //display: flex;
 `;
+
+
 const FooterBoxA = styled.div`
   float: left;
   width: 239px;
   height: 265px;
   position: relative;
-
   display: block;
 `;
 
 const FooterLogo = styled.div`
-  margin-top: 67px;
-  margin-left: 18px;
-  //width: 221px;
-  //height: 62px;
+  margin-top: 60px;
+  margin-left: 40px;
+  
   display: flex;
   position: relative;
   top: 0px;
 `;
+
 const Footertel = styled.div`
   position: relative;
   width: 206px;
   height: 58px;
-
   color: #f4f4f4;
-  margin-top: 29px;
+  margin-top: 40px;
   margin-left: 18px;
+  
   p:first-child {
     line-height: 1.5;
     font-family: "Noto Sans KR", serif;
     font-size: 13px;
-    font-weight: medium;
+  
   }
   p {
     font-family: "Montserrat", serif;
@@ -129,7 +151,7 @@ const FooterBoxB = styled.div`
 `;
 const FooterText = styled.div`
   display: block;
-  margin-top: 67px;
+  margin-top: 50px;
   margin-bottom: 18px;
   margin-left: 214px;
   position: relative;
@@ -139,6 +161,7 @@ const FooterText = styled.div`
   height: 48px;
   line-height: 24px;
   font-family: "Noto Sans KR", serif;
+  text-align: left;
   td:first-child {
     padding-right: 10px;
     font-weight: 800;
