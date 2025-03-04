@@ -333,15 +333,15 @@ const PwFind = styled.a`
 //6-1. sns 간편 로그인
 const Article = styled.div`
   position: relative;
-  font-size: 12px;
-  font-weight: 700;
-  color: #888888;
-  text-align: center;
   width: 470px;
   
+  
   .sns{
-    margin-right: 20px;
-    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #888888;
+    text-align: center;
+    padding: 0px 20px 0px 5px;
   }
   .left{
     position: absolute;
@@ -393,8 +393,10 @@ const SignButton = styled.button`
   }
   
   &:hover{
-    border: 1px solid #FFA228;
-    background-color: #FFA228;
+    border: 1px solid #0D326F;
+    color: #0D326F;
+    font-weight: 600;
+    box-shadow: rgba(0,0,0,0.8);
   };
 `;
 
