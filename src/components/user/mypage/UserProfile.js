@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from 'react-router-dom';
 
-
+//마이페이지-내 프로필
 function UserProfile() {
 
   // 강사 수정(네비)
