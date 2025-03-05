@@ -5,7 +5,7 @@ import search from "./imgs/search.png";
 import { Link } from "react-router-dom";
 
 
-
+//NoticeTable
 function NoticeTable({ bbsList }) {
    console.log("bbsList여부", bbsList);  // bbsList가 전달되고 있는지 확인
   // const notices = [
@@ -39,12 +39,15 @@ function NoticeTable({ bbsList }) {
 
   return (
     <Container>
+      <NoticeTableBox>
       <NoticeSearchBox>
         <img src={search} />
-        <SearchField type="text" placeholder="검색 할 것을 적어보세요." />
+        <SearchField
+            type="text"
+            placeholder="무엇이든 찾아보세요." />
       </NoticeSearchBox>
 
-      <NoticeTableBox>
+
         <NoticeTabled>
           <thead>
             <tr>
@@ -72,6 +75,7 @@ function NoticeTable({ bbsList }) {
                   // 빈 데이터 행일 때 (공백 행)
                   <>
                     <td colSpan={4}>&nbsp;</td>
+                    <td> 글</td>
                   </>
                 )}
               </tr>
@@ -85,30 +89,45 @@ function NoticeTable({ bbsList }) {
 
 // 컨테이너
 const Container = styled.div`
-  width:100%
-  max-width: 1920px;
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  
 `;
 
 //  검색 박스
 const NoticeSearchBox = styled.div`
   display: flex;
-  width: 1280px;
-  height: 90px;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  width: 900px;
+  border: none;
+  outline: none;
+  margin-bottom: 80px;
+  
   img {
-    position: absolute;
-    left: 180px;
-    top: 35px;
-    width: 30px;
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+    cursor: pointer;
   }
   input {
-    padding-left: 50px;
-    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #888;
+    
   }
   input:focus {
     outline: none;
+    color: #111;
   }
 `;
 
@@ -119,40 +138,33 @@ const SearchField = styled.input`
   height: 55px;
   border: none;
   border-bottom: 1px solid #ccc;
-  font-weight: regular;
-  font-size: 36px;
+  font-weight: 400;
+  font-size: 18px;
   font-family: "Noto Sans KR", serif;
 `;
 
 //  공지사항 테이블 박스
 const NoticeTableBox = styled.div`
-  width: 100%;
-  max-width: 1280px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-  padding-left: 140px;
-  padding-right: 140px;
+  
 `;
 
 //  공지사항 테이블
 const NoticeTabled = styled.table`
-  width: 100%;
-  
-  border-collapse: collapse;
+  width: 900px;
+  padding: 40px 20px 20px 20px;
+  border-bottom: 1px solid rgb(176, 184, 193);
   
 
   thead {
-    background-color: #f4f4f4;
-    font-weight: bold;
+    background-color: #f5f7f9;
   }
 
   thead th {
     padding: 10px;
-    font-weight: medium;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 16px;
     font-family: "Noto Sans KR", serif;
+    color: #111;
   }
 
 tbody tr {
@@ -161,18 +173,18 @@ tbody tr {
     height: 40px;
   }
   &:nth-child(even) {
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #111111;
+    background-color: #f5f7f9;
+    border-bottom: 1px solid rgb(176, 184, 193);
     height: 70px;
   }
 }
 
 tbody td {
   padding: 10px;
-  font-weight: regular;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 14.2px;
+  color: #888;
   font-family: "Noto Sans KR", serif;
-  vertical-align: middle;
   text-align: center;  /* 기본적으로 가운데 정렬 */
 }
 

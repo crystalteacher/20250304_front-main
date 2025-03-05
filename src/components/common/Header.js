@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 
 import { Link } from "react-router-dom";
-import header_logo from "./imgs/logo_w.svg";
+import header_logo from "./imgs/footer_logo.png";
 import header_menu_stroke from "./imgs/header_menu.svg";
 import myIcon from "./imgs/header_mypage.svg";
 import userIcon from "./imgs/header_user.svg";
@@ -175,16 +175,14 @@ function Header() {
 const HeaderContainer = styled.div`
   display: block;
   width: 100%;
+  max-width: 1920px;
+  margin: 0px auto;
   height: 100px;
   background-color: #0D326F;
 `;
 
 const HeaderSection = styled.div`
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
-  //min-width: 1480px;
-  //height: 122px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,31 +200,41 @@ const HeaderSection = styled.div`
 const Logo = styled.h1`
   display: flex;
   align-items: center;
+  justify-content: left;
   width: 150px;
   height: 100px;
+  
   img {
-    margin-left: 5px;
+    cursor: pointer;
     margin-top: 5px;
   }
 `;
 
 //
 const Navigation = styled.nav`
-
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  
    z-index: 99 ;
-// width: 820px;
-  height: 100px;
+  width: 500px;
+  
   font-weight: 500;
   text-align: center;
-  position: relative;
+  //position: relative;
+  
   img {
     position: relative;
-    top: -5px;
+    top: -8px;
   }
-  ul {
   
-  position: relative;
+  ul {
+
+    position: relative;
+    
     display: flex;
+    justify-content: left;
+    width: 500px;
     list-style: none;
   }
   ul:first-child {
@@ -318,7 +326,8 @@ const Navigation = styled.nav`
 const MenuLink = styled(Link)`
   text-decoration: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 14.2px;
+  width: 600px;
   //lineheight: 16;
 
   &:hover {
@@ -336,24 +345,27 @@ const SubLink = styled(Link)`
 `;
 //네비)오른쪽
 const HederSectionB = styled.div`
-  //width: 230px;
-  //height: 122px;
-  //padding: 45px 50px 20px 20px;
+  
   margin-bottom: 25px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   &:hover {
     color:#FFA228;
   }
 `;
 
 const LoginBox = styled.div`
-  padding-top: 25px;
-  font-size: 12px;
-  float: right;
+  padding: 50px 20px 20px 20px;
+  font-size: 14.2px;
   position: relative;
+  display: flex;
+  justify-content: left;
   color: #fff;
-  //lineheight: 16;
-  margin-left: 40px;
+  
+  width: 300px;
+  
 
 
   a{
@@ -363,7 +375,7 @@ const LoginBox = styled.div`
   }
   
   
-  a:first-child {
+  a {
     padding: 16px;
     &:hover {
       color:#FFA228;
@@ -390,12 +402,8 @@ const LoginButton = styled.button`
 `;
 
 const SearchBox = styled.button`
-  //right: 5px;
+  
   top: 20px;
-  float: right;
-  //width: 190px;
-  //height: 25px;
-  //background-color: transparent;
   border: none;
   font-size: 12px;
   cursor: pointer;
@@ -404,7 +412,7 @@ const SearchBox = styled.button`
   width: 260px;
   height: 30px;
   border-radius: 15px 13px;
-
+  margin-bottom: 16px;
   
   outline: none;
   input {

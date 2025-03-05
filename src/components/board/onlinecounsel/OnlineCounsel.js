@@ -105,13 +105,12 @@ const NoticeTitle = styled.div`
 //페이지네이션
 const PaginationBox = styled.div`
   padding: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: center; /* 중앙 정렬 */
   align-items: center;
   width: 1000px;
   height: 50px;
-  background-color: #ffffff;
   flex-direction: row;
 
   /* Pagination 스타일 */

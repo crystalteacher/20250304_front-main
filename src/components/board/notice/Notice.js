@@ -30,13 +30,14 @@ function Notice() {
     getBbsList(page);
   }, [page]);
 
-  
+  //----------
   return (
     <Container>
       <ContentWrapper>
-        <NoticeTitle>
-          <h1>공지사항</h1>
-        </NoticeTitle>
+        <LoginBox>
+          <LoginTitle>공지사항</LoginTitle>
+          <LoginSub>하이펫병원의 새로운 소식을 확인하세요.</LoginSub>
+        </LoginBox>
 
         <NoticeTable
            bbsList={bbsList}
@@ -65,6 +66,31 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+// 1.로그인 문구_박스
+const LoginBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+  pointer-events: none;
+  margin-top: 60px;
+  margin-bottom: 30px;
+`;
+const LoginTitle = styled.h1`
+  font-weight: 700;
+  line-height: 1.3em;
+  font-size: 42px;
+  color: #111;
+  text-align: center;
+`;
+const LoginSub = styled.p`
+  display: block;
+  margin-top: 1.5em;
+  color: #888888;
+  font-size: 14px;
+  text-align: center;
 `;
 
 //  내부 콘텐츠

@@ -51,11 +51,14 @@ const Router = () => {
         <Route path="/introduce" element={<Introduce />} />
         <Route path="/directions" element={<Directions />} />
         <Route path="/department" element={<Department />} />
-        <Route path="/notice" element={<Notice />}></Route>
 
-        <Route path="/noticeUpdate" element={<NoticeUpdate />}></Route>
+        {/*공지사항*/}
+        <Route path="/notice" element={<Notice />}></Route>
         <Route path="/noticeWrite" element={<NoticeWrite />}></Route>
         <Route path="/noticedetail/:noticeId" element={<NoticeDetail />}></Route>
+        <Route path="/noticeUpdate/:noticeId" element={<NoticeUpdate />}></Route>
+
+
 
         <Route path="/userreserv" element={<UserReserv />}></Route>
         <Route path="/nonuserreserve" element={<NonUserReserve />}></Route>

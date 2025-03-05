@@ -36,15 +36,16 @@ const Container = styled.div`
 `;
 
 const PaginationBox = styled.div`
-  padding: 10px;
-  margin-bottom: 40px;
+  padding: 50px 20px 20px 20px;
+    margin-top: 80px;
+    margin-bottom: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px;
-  height: 50px;
-  background-color: #ffffff;
+  width: 900px;
+  height: 54px;
   flex-direction: row;
+    
 
   .pagination {
     display: flex;
@@ -56,6 +57,15 @@ const PaginationBox = styled.div`
     display: inline-block;
     margin: 0 5px;
   }
+    
+    a{
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: "Montserrat", serif;
+        color: #333;
+        
+    }
 `;
 
 export default OnlineCounselPagination;
